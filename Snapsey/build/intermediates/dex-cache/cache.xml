@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bryan\AppData\Local\Android\Sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\constraint-layout-solver-1.0.2_a533400b2082b87cc6c2f4088afdc6429d45b82a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bryan\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.1.3\f6c3aed1cdfa21b5c1737c915186ea93a95a58bd\jackson-core-2.1.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f6c3aed1cdfa21b5c1737c915186ea93a95a58bd">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\jackson-core-2.1.3_b7d0fd93de853863af30c967c8d2164b4403332e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="02741d05d4b697fba5e279e9881aaa1da0ca7c7f">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-25.1.1_780b688ebf3fcbabc95e5dc60104bcfddbd02b26\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bryan\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\25.1.1\support-annotations-25.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b59b6ee8d6ecc03e672d253800430343493a6ed8">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.1.1_a8adfef57782be266914b7f017494049e6a34305\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\exploded-aar\com.android.support\transition\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="15b049fedbd8e3926bf99d9e45dfc9b2a1043bb9">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-transition-25.1.1_1d7b08245a8d2852b38fd2af97fd5c1c635125d2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bryan\.gradle\caches\modules-2\files-2.1\com.google.cloud\google-cloud-core\1.14.0\786cfef24b305c7576cc7ef055af1bafdd0fd68e\google-cloud-core-1.14.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="786cfef24b305c7576cc7ef055af1bafdd0fd68e">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\google-cloud-core-1.14.0_12c0385603b82c5ddc3807ee5864627c179821bb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0d191c1a09e4892d059e5ce749e4ad4e08129e35">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-25.1.1_0419bf5740570d41cb2a4c94755718a2faa1db31\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bryan\.gradle\caches\modules-2\files-2.1\com.google.auth\google-auth-library-credentials\0.9.0\8e2b181feff6005c9cbc6f5c1c1e2d3ec9138d46\google-auth-library-credentials-0.9.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8e2b181feff6005c9cbc6f5c1c1e2d3ec9138d46">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\google-auth-library-credentials-0.9.0_3430864d5c39117a4788e57797b4024151fe9fd2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bryan\.gradle\caches\modules-2\files-2.1\com.google.http-client\google-http-client-gson\1.20.0\9204765f39000f6109c927ac66c7963bf9c7df19\google-http-client-gson-1.20.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9204765f39000f6109c927ac66c7963bf9c7df19">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\google-http-client-gson-1.20.0_58a4afd3c398d43813a264aad75d553516c63914\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7bde4c34162092e0a77e7f12dc85ed77c484cf5c">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.1.1_d07bbcec25c7955dccf50d10e29c05ca9fa4fb38\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3e04ac8ca644ea7baddf6fdcf72e15c79e9df94a">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-25.1.1_0f4b3b8a575c287057a507faa607fad5a072c44e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bryan\.gradle\caches\modules-2\files-2.1\com.google.apis\google-api-services-vision\v1-rev2-1.21.0\4db84d916e8ec80d9aa11c5f89a6cb6621ac1c85\google-api-services-vision-v1-rev2-1.21.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4db84d916e8ec80d9aa11c5f89a6cb6621ac1c85">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\google-api-services-vision-v1-rev2-1.21.0_69106684549f2a2103c4d4a58b263acbb289b07e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bryan\.gradle\caches\modules-2\files-2.1\com.google.http-client\google-http-client-android\1.20.0\313dc99a7963523871495897ca11aa8472b3c6fd\google-http-client-android-1.20.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="313dc99a7963523871495897ca11aa8472b3c6fd">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\google-http-client-android-1.20.0_e7f9387c4922b2164e5a8a0b95de1611265b741a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bryan\.gradle\caches\modules-2\files-2.1\com.google.auto.value\auto-value\1.2\6873fed014fe1de1051aae2af68ba266d2934471\auto-value-1.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6873fed014fe1de1051aae2af68ba266d2934471">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\auto-value-1.2_0f40b45b8c7e6c99e008dee8af9f605e1daf7709\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bryan\.gradle\caches\modules-2\files-2.1\com.google.api-client\google-api-client-android\1.20.0\5673179575c32b69a474334255c3044adf18d40\google-api-client-android-1.20.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="05673179575c32b69a474334255c3044adf18d40">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\google-api-client-android-1.20.0_905617a38f3e5f0e324da0c35dff1f08c1cb5494\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\exploded-aar\com.android.support.constraint\constraint-layout\1.0.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support.constraint-constraint-layout-1.0.2_28fd08d5a4afc76084a9f6b1c0da7a925a97d971\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bryan\.gradle\caches\modules-2\files-2.1\joda-time\joda-time\2.9.2\36d6e77a419cb455e6fd5909f6f96b168e21e9d0\joda-time-2.9.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="36d6e77a419cb455e6fd5909f6f96b168e21e9d0">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\joda-time-2.9.2_7b41f8930c2f0ff50586acc66cad58c992505452\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0fb891e8f0cfba0513043a7bb357513d229ca2cd">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-25.1.1_def8c94244aed75f22c0ad64712f6a5b360e8fe7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e2719c102dca3a7a5b02ce07f769362da6ddb4ab">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.1.1_34bcbb8ddb279d16d9ed301db5056e5464b68dff\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bryan\.gradle\caches\modules-2\files-2.1\com.google.api.grpc\proto-google-iam-v1\0.1.26\c32200cd76ba383bcab3aef85473841b7c3eb348\proto-google-iam-v1-0.1.26.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c32200cd76ba383bcab3aef85473841b7c3eb348">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\proto-google-iam-v1-0.1.26_756d52dbbd54759f3c00e65c4c58daf6c964c885\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bryan\.gradle\caches\modules-2\files-2.1\com.google.protobuf\protobuf-java-util\3.4.0\96aba8ab71c16018c6adf66771ce15c6491bc0fe\protobuf-java-util-3.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="96aba8ab71c16018c6adf66771ce15c6491bc0fe">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\protobuf-java-util-3.4.0_ed10d4e194dc4b460dc3f8a223997d05f8977d82\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c03bf57f358aa10d253f21989e93bcf6014b3b17">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-25.1.1_9115b368d34ee9434a1e28fbc59c163b5428f416\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bryan\.gradle\caches\modules-2\files-2.1\com.google.protobuf\protobuf-java\3.4.0\b32aba0cbe737a4ca953f71688725972e3ee927c\protobuf-java-3.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b32aba0cbe737a4ca953f71688725972e3ee927c">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\protobuf-java-3.4.0_904e3e52eaf03f7950e5d2824b2e5c09ced501d8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bryan\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\3.0.0\5871fb60dc68d67da54a663c3fd636a10a532948\jsr305-3.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\jsr305-3.0.0_51bcae9bb427e487efde67f3f41912356f9ff3c2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bryan\.gradle\caches\modules-2\files-2.1\com.google.apis\google-api-services-translate\v2-rev47-1.22.0\884c99a70ead22855a673509a21f5d5f5246812c\google-api-services-translate-v2-rev47-1.22.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="884c99a70ead22855a673509a21f5d5f5246812c">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\google-api-services-translate-v2-rev47-1.22.0_f917913aa4bd9dd4fda9169144376bd76d407c1b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bryan\.gradle\caches\modules-2\files-2.1\com.google.http-client\google-http-client-jackson2\1.23.0\fd6761f4046a8cb0455e6fa5f58e12b061e9826e\google-http-client-jackson2-1.23.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fd6761f4046a8cb0455e6fa5f58e12b061e9826e">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\google-http-client-jackson2-1.23.0_83a4c5d6ccf663c1d9c2e708932a3c8d778408f3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bryan\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.7\751f548c85fa49f330cecbb1875893f971b33c4e\gson-2.7.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.7_3c3ed5b4e22fb9079cb336f1bf5fa41601ad51c9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bryan\.gradle\caches\modules-2\files-2.1\org.codehaus.jackson\jackson-core-asl\1.9.11\e32303ef8bd18a5c9272780d49b81c95e05ddf43\jackson-core-asl-1.9.11.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e32303ef8bd18a5c9272780d49b81c95e05ddf43">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\jackson-core-asl-1.9.11_d336a7281aaeefa8e3889b7460f1f7ad96f08676\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bryan\.gradle\caches\modules-2\files-2.1\com.google.guava\guava-jdk5\17.0\463f8378feba44df7ba7cd9272d01837dad62b36\guava-jdk5-17.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="463f8378feba44df7ba7cd9272d01837dad62b36">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\guava-jdk5-17.0_2dea887424b38ee5fbb9783d4ae1ba11fba69dbd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ecb496cc08dd52551fc5ec6db3bc0632e95a89bb">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-25.1.1_295d77ad36a1267fb14f912a61a91f3216016db3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c9649557905bf7a80fca9e0d54cbcb7662627860">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-25.1.1_fa03fba7e79924ad2081961f077ca572052f1683\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bryan\.gradle\caches\modules-2\files-2.1\com.google.api\api-common\1.2.0\ac251a3623e19c4eb0a7dbb503ca32a0515f9713\api-common-1.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ac251a3623e19c4eb0a7dbb503ca32a0515f9713">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\api-common-1.2.0_3a13a68cdcb26809ef9edc0be72e06a659557999\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bryan\.gradle\caches\modules-2\files-2.1\com.google.http-client\google-http-client-jackson\1.23.0\a72ea3a197937ef63a893e73df312dac0d813663\google-http-client-jackson-1.23.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a72ea3a197937ef63a893e73df312dac0d813663">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\google-http-client-jackson-1.23.0_c71f5a30b09759e1c18b26a2b4268dd062f8d97c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bryan\.gradle\caches\modules-2\files-2.1\com.google.api\gax\1.15.0\b719f1b3ffac7d67ce898441f8c91fc5060b27cf\gax-1.15.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b719f1b3ffac7d67ce898441f8c91fc5060b27cf">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\gax-1.15.0_ce14e76fc5e01e158761231f5dc06c998eb2928f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bryan\.gradle\caches\modules-2\files-2.1\com.google.cloud\google-cloud-translate\1.14.0\aa3e398038f48e4b3d2b3b9522b4956015ca9808\google-cloud-translate-1.14.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="aa3e398038f48e4b3d2b3b9522b4956015ca9808">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\google-cloud-translate-1.14.0_5060c2e0970242c1537117a8ed740631ace1854c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bryan\.gradle\caches\modules-2\files-2.1\com.google.cloud\google-cloud-core-http\1.14.0\b15aaeac6e119645e044a4e441ee93ffbc33d6e1\google-cloud-core-http-1.14.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b15aaeac6e119645e044a4e441ee93ffbc33d6e1">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\google-cloud-core-http-1.14.0_8adb583c7bed76b885cbc3cee1557bddc47707c2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bryan\.gradle\caches\modules-2\files-2.1\org.threeten\threetenbp\1.3.3\3ea31c96676ff12ab56be0b1af6fff61d1a4f1f2\threetenbp-1.3.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3ea31c96676ff12ab56be0b1af6fff61d1a4f1f2">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\threetenbp-1.3.3_ebdd6b27712b93dcee20a68d155eae4743ce00b2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bryan\.gradle\caches\modules-2\files-2.1\com.google.http-client\google-http-client-appengine\1.23.0\eda0d0f758c1cc525866e52e1226c4eb579d130\google-http-client-appengine-1.23.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0eda0d0f758c1cc525866e52e1226c4eb579d130">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\google-http-client-appengine-1.23.0_36c20d46796eb81d258bf8e2dce2ad6da99c452c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bryan\.gradle\caches\modules-2\files-2.1\com.google.api.grpc\proto-google-common-protos\1.0.2\89d66b4bacc66498cda04984a3761cf1112d6990\proto-google-common-protos-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="89d66b4bacc66498cda04984a3761cf1112d6990">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\proto-google-common-protos-1.0.2_63006fc18e67833befef629fd4764073d931a5ea\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bryan\.gradle\caches\modules-2\files-2.1\com.google.api-client\google-api-client\1.23.0\522ea860eb48dee71dfe2c61a1fd09663539f556\google-api-client-1.23.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="522ea860eb48dee71dfe2c61a1fd09663539f556">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\google-api-client-1.23.0_8c25057a8d2a58b34a2f3726821bae0bcb3509d4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bryan\.gradle\caches\modules-2\files-2.1\com.google.oauth-client\google-oauth-client\1.23.0\e57ea1e2220bda5a2bd24ff17860212861f3c5cf\google-oauth-client-1.23.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e57ea1e2220bda5a2bd24ff17860212861f3c5cf">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\google-oauth-client-1.23.0_4274318de7855c248bb55cae3f3d272ccae30d39\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bryan\.gradle\caches\modules-2\files-2.1\com.google.auth\google-auth-library-oauth2-http\0.9.0\4e6152c3aead24148627e84f5651e79698c00d9\google-auth-library-oauth2-http-0.9.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="04e6152c3aead24148627e84f5651e79698c00d9">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\google-auth-library-oauth2-http-0.9.0_94f232995db3ad35deced7d2ede6ccacd357f6d2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bryan\.gradle\caches\modules-2\files-2.1\com.google.guava\guava\20.0\89507701249388e1ed5ddcf8c41f4ce1be7831ef\guava-20.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="89507701249388e1ed5ddcf8c41f4ce1be7831ef">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\guava-20.0_713599f5be39868f897b8d6f5ab459d99377d68e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\exploded-aar\com.android.support\design\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="cd7951e04cfb9a8bf008d544a478d9a8d8192d38">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-25.1.1_38ba4a0b56cf287c1ae71addf980ff49b077a34c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-25.1.1_ade66d288663885599555f12be16e446b2b968de\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bryan\.gradle\caches\modules-2\files-2.1\com.google.http-client\google-http-client\1.23.0\8e86c84ff3c98eca6423e97780325b299133d858\google-http-client-1.23.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8e86c84ff3c98eca6423e97780325b299133d858">
+        <dex dex="E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\transforms\dex\debug\folders\1000\10\google-http-client-1.23.0_c772f50668d1b2ff941ca4f137e792591a6b8956\classes.dex" />
+    </item>
+
+</items>
