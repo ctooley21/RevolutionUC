@@ -60,7 +60,7 @@ import java.util.List;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
-    private static final String CLOUD_VISION_API_KEY = "YOUR_API_KEY";
+    private static final String CLOUD_VISION_API_KEY = "AIzaSyB7R0TWeY2oDlne-8_pOvVzMhQoS2BEoVM";
     public static final String FILE_NAME = "temp.jpg";
     private static final String ANDROID_CERT_HEADER = "X-Android-Cert";
     private static final String ANDROID_PACKAGE_HEADER = "X-Android-Package";
@@ -81,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        /*
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,17 +98,19 @@ public class MainActivity extends AppCompatActivity {
                         .setNegativeButton(R.string.dialog_select_camera, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                startCamera();
+
                             }
                         });
-                builder.create().show();
-            }
-        });
+        */
+        startCamera();
+                //builder.create().show();
+
+
 
         mImageDetails = (TextView) findViewById(R.id.image_details);
         mMainImage = (ImageView) findViewById(R.id.main_image);
     }
-
+    /*
     public void startGalleryChooser() {
         if (PermissionUtils.requestPermission(this, GALLERY_PERMISSIONS_REQUEST, Manifest.permission.READ_EXTERNAL_STORAGE)) {
             Intent intent = new Intent();
@@ -117,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
                     GALLERY_IMAGE_REQUEST);
         }
     }
-
+    */
     public void startCamera() {
         if (PermissionUtils.requestPermission(
                 this,
@@ -159,11 +162,13 @@ public class MainActivity extends AppCompatActivity {
                     startCamera();
                 }
                 break;
+                /*
             case GALLERY_PERMISSIONS_REQUEST:
                 if (PermissionUtils.permissionGranted(requestCode, GALLERY_PERMISSIONS_REQUEST, grantResults)) {
                     startGalleryChooser();
                 }
                 break;
+                */
         }
     }
 
@@ -174,7 +179,7 @@ public class MainActivity extends AppCompatActivity {
                 Bitmap bitmap =
                         scaleBitmapDown(
                                 MediaStore.Images.Media.getBitmap(getContentResolver(), uri),
-                                1200);
+                                1920);
 
                 callCloudVision(bitmap);
                 mMainImage.setImageBitmap(bitmap);
@@ -246,7 +251,7 @@ public class MainActivity extends AppCompatActivity {
                         // add the features we want
                         annotateImageRequest.setFeatures(new ArrayList<Feature>() {{
                             Feature labelDetection = new Feature();
-                            labelDetection.setType("LABEL_DETECTION");
+                            labelDetection.setType("LOGO_DETECTION");
                             labelDetection.setMaxResults(10);
                             add(labelDetection);
                         }});
@@ -302,7 +307,8 @@ public class MainActivity extends AppCompatActivity {
     private String convertResponseToString(BatchAnnotateImagesResponse response) {
         String message = "I found these things:\n\n";
 
-        List<EntityAnnotation> labels = response.getResponses().get(0).getLabelAnnotations();
+       // List<EntityAnnotation> labels = response.getResponses().get(0).getLabelAnnotations();
+       List<EntityAnnotation> labels = response.getResponses().get(0).getLogoAnnotations();
         if (labels != null) {
             for (EntityAnnotation label : labels) {
                 message += String.format(Locale.US, "%.3f: %s", label.getScore(), label.getDescription());
