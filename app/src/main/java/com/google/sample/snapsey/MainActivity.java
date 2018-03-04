@@ -287,13 +287,22 @@ public class MainActivity extends AppCompatActivity
                         base64EncodedImage.encodeContent(imageBytes);
                         annotateImageRequest.setImage(base64EncodedImage);
 
+                        List<Feature> features = new ArrayList<>();
+
+                        Feature logoDetection = new Feature();
+                        logoDetection.setType("LOGO_DETECTION");
+                        logoDetection.setMaxResults(1);
+
+                        features.add(logoDetection);
+
+                        Feature labelDetection = new Feature();
+                        labelDetection.setType("LABEL_DETECTION");
+                        labelDetection.setMaxResults(1);
+
+                        features.add(labelDetection);
+
                         // add the features we want
-                        annotateImageRequest.setFeatures(new ArrayList<Feature>() {{
-                            Feature labelDetection = new Feature();
-                            labelDetection.setType("LOGO_DETECTION");
-                            labelDetection.setMaxResults(10);
-                            add(labelDetection);
-                        }});
+                        annotateImageRequest.setFeatures(features);
 
                         // Add the list of one thing to the request
                         add(annotateImageRequest);
@@ -349,18 +358,30 @@ public class MainActivity extends AppCompatActivity
 
     private String convertResponseToString(BatchAnnotateImagesResponse response)
     {
-       // List<EntityAnnotation> labels = response.getResponses().get(0).getLabelAnnotations();
-       List<EntityAnnotation> labels = response.getResponses().get(0).getLogoAnnotations();
+       List<EntityAnnotation> labels = response.getResponses().get(0).getLabelAnnotations();
+       List<EntityAnnotation> logos = response.getResponses().get(0).getLogoAnnotations();
 
        StringBuilder sb = new StringBuilder();
        sb.append("I found these things:\n\n");
+
+        if (logos != null) {
+            for (EntityAnnotation logo : logos) {
+                String word = logo.getDescription();
+                sb.append(word);
+                sb.append(" - ");
+                sb.append(TranslationUtil.translate(word, "spanish"));
+                sb.append("\n");
+            }
+        } else {
+            sb.append("Nothing found");
+        }
 
         if (labels != null) {
             for (EntityAnnotation label : labels) {
                 String word = label.getDescription();
                 sb.append(word);
                 sb.append(" - ");
-                sb.append(TranslationUtil.translate(word, "english"));
+                sb.append(TranslationUtil.translate(word, "spanish"));
                 sb.append("\n");
             }
         } else {
