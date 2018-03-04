@@ -34,6 +34,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -71,14 +72,19 @@ public class MainActivity extends AppCompatActivity {
     public static final int CAMERA_PERMISSIONS_REQUEST = 2;
     public static final int CAMERA_IMAGE_REQUEST = 3;
 
+    //ProgressBar = (ProgressBar) findViewById(R.id.progressBar);
+
     private TextView mImageDetails;
     private ImageView mMainImage;
+    private ProgressBar mProgressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        mProgressBar = (ProgressBar)findViewById(R.id.progressBar);
+        mImageDetails = (TextView) findViewById(R.id.image_details);
         setSupportActionBar(toolbar);
 
         /*
@@ -108,6 +114,7 @@ public class MainActivity extends AppCompatActivity {
     public void begin(){
         startCamera();
         //builder.create().show();
+        mProgressBar.setVisibility(View.INVISIBLE);
         mImageDetails = (TextView) findViewById(R.id.image_details);
         mMainImage = (ImageView) findViewById(R.id.main_image);
     }
@@ -220,8 +227,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void callCloudVision(final Bitmap bitmap) throws IOException {
         // Switch text to loading
-        mImageDetails.setText(R.string.loading_message);
-
+        //mImageDetails.setText(R.string.loading_message);
+        mProgressBar.setVisibility(View.VISIBLE);
+        mImageDetails.setVisibility(View.GONE);
         // Do the real work in an async task, because we need to use the network anyway
         new AsyncTask<Object, Void, String>() {
             @Override
@@ -303,6 +311,8 @@ public class MainActivity extends AppCompatActivity {
             }
 
             protected void onPostExecute(String result) {
+                mProgressBar.setVisibility(View.GONE);
+                mImageDetails.setVisibility(View.VISIBLE);
                 mImageDetails.setText(result);
             }
 
