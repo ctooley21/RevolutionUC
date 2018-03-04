@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         mProgressBar = (ProgressBar)findViewById(R.id.progressBar);
-        mImageDetails = (TextView) findViewById(R.id.image_details);
+        mImageDetails = (TextView) findViewById(R.id.logoAndSpan);
         //setSupportActionBar(toolbar);
 
         try
@@ -121,7 +121,7 @@ public class MainActivity extends AppCompatActivity
         startCamera();
         //builder.create().show();
         mProgressBar.setVisibility(View.INVISIBLE);
-        mImageDetails = (TextView) findViewById(R.id.image_details);
+        mImageDetails = (TextView) findViewById(R.id.logoAndSpan);
         mMainImage = (ImageView) findViewById(R.id.main_image);
         mMainImage.setRotation(90);
     }

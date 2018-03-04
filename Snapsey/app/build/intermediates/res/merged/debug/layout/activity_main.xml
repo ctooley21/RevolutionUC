@@ -16,13 +16,13 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="#3498DB"
             android:textAlignment="center"
             android:touchscreenBlocksFocus="false"
             android:visibility="visible"
             app:popupTheme="@style/AppTheme.PopupOverlay"
             app:title="Snapsey"
-            app:titleMarginStart="160dp"
+            app:titleMarginStart="150dp"
             app:titleMarginTop="0dp" />
 
     </android.support.design.widget.AppBarLayout>
