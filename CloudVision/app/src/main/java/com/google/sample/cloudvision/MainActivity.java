@@ -102,15 +102,39 @@ public class MainActivity extends AppCompatActivity {
                             }
                         });
         */
+
+        begin();
+    }
+    public void begin(){
         startCamera();
-                //builder.create().show();
-
-
-
+        //builder.create().show();
         mImageDetails = (TextView) findViewById(R.id.image_details);
         mMainImage = (ImageView) findViewById(R.id.main_image);
     }
+        /*
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+
+        builder.setTitle("Go Again?");
+
+        builder.setMessage("");
+        builder.setPositiveButton("OK", null);
+        builder.setNegativeButton("Cancel", null);
+        builder.show();
+    }
+         */
     /*
+    public void showDialog(Activity activity, String title, CharSequence message) {
+    AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+
+    if (title != null) builder.setTitle(title);
+
+    builder.setMessage(message);
+    builder.setPositiveButton("OK", null);
+    builder.setNegativeButton("Cancel", null);
+    builder.show();
+}
+
+
     public void startGalleryChooser() {
         if (PermissionUtils.requestPermission(this, GALLERY_PERMISSIONS_REQUEST, Manifest.permission.READ_EXTERNAL_STORAGE)) {
             Intent intent = new Intent();
@@ -179,7 +203,7 @@ public class MainActivity extends AppCompatActivity {
                 Bitmap bitmap =
                         scaleBitmapDown(
                                 MediaStore.Images.Media.getBitmap(getContentResolver(), uri),
-                                1920);
+                                1200);
 
                 callCloudVision(bitmap);
                 mMainImage.setImageBitmap(bitmap);
@@ -281,7 +305,9 @@ public class MainActivity extends AppCompatActivity {
             protected void onPostExecute(String result) {
                 mImageDetails.setText(result);
             }
+
         }.execute();
+
     }
 
     public Bitmap scaleBitmapDown(Bitmap bitmap, int maxDimension) {
