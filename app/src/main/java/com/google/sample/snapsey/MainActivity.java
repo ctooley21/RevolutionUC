@@ -87,6 +87,7 @@ public class MainActivity extends AppCompatActivity
         try
         {
             TranslationUtil.init();
+            NutritionUtil.init();
         }
         catch (Exception e)
         {
@@ -371,6 +372,8 @@ public class MainActivity extends AppCompatActivity
                 sb.append(" - ");
                 sb.append(TranslationUtil.translate(word, "spanish"));
                 sb.append("\n");
+
+                NutritionUtil.postData(word);
             }
         } else {
             sb.append("Nothing found");
