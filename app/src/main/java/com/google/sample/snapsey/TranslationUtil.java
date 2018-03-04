@@ -1,7 +1,6 @@
 package com.google.sample.snapsey;
 
-
-import com.google.api.client.googleapis.javanet.GoogleNetHttpTransport;
+import com.google.api.client.http.apache.ApacheHttpTransport;
 import com.google.api.client.json.gson.GsonFactory;
 import com.google.api.services.translate.Translate;
 import com.google.api.services.translate.model.TranslationsListResponse;
@@ -18,14 +17,16 @@ public class TranslationUtil
 {
 
     private static Translate t;
-    private static HashMap<String, String> languages = new HashMap<>();
-    private static String API_KEY = "AIzaSyDoml5iMKBAFSdnwC5_JGbcbEku6yvTCWk";
+    private static HashMap<String, String> languages;
+    private static String API_KEY;
 
     public static void init() throws IOException, GeneralSecurityException
     {
-        t = new Translate.Builder(GoogleNetHttpTransport.newTrustedTransport(),
-                GsonFactory.getDefaultInstance(), null).setApplicationName("CloudVision").build();
+        t = new Translate.Builder(new ApacheHttpTransport(),
+                GsonFactory.getDefaultInstance(), null).setApplicationName("Snapsey").build();
+        API_KEY = "AIzaSyDoml5iMKBAFSdnwC5_JGbcbEku6yvTCWk";
 
+        languages = new HashMap<>();
         languages.put("english", "en");
         languages.put("spanish", "es");
         languages.put("french", "fr");
@@ -37,14 +38,14 @@ public class TranslationUtil
         StringBuilder translated = new StringBuilder();
         Translate.Translations.List list;
         TranslationsListResponse response;
+
         try
         {
-            list = t.new Translations().list(
-                    Arrays.asList(word), getAbbreviation(toLanguage));
+            list = t.new Translations().list(Arrays.asList(word), getAbbreviation(toLanguage));
             list.setKey(getApiKey());
             response = list.execute();
         }
-        catch (IOException e)
+        catch (Exception e)
         {
             return "Unable to translate.";
         }
@@ -61,7 +62,14 @@ public class TranslationUtil
 
     private static String getAbbreviation(String language)
     {
-        return languages.get(language);
+        for(String s : languages.keySet())
+        {
+            if(s.equalsIgnoreCase(language))
+            {
+                return languages.get(s);
+            }
+        }
+        return null;
     }
 
     private static String getApiKey()

@@ -53,7 +53,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -77,6 +76,15 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        try
+        {
+            TranslationUtil.init();
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
 
         /*
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -337,7 +345,7 @@ public class MainActivity extends AppCompatActivity
 
         if (labels != null) {
             for (EntityAnnotation label : labels) {
-                String word = String.format(Locale.US, "%.3f: %s", label.getScore(), label.getDescription());
+                String word = label.getDescription();
                 sb.append(word);
                 sb.append(" - ");
                 sb.append(TranslationUtil.translate(word, "english"));
