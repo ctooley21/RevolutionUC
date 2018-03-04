@@ -29,7 +29,9 @@ import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -69,12 +71,17 @@ public class MainActivity extends AppCompatActivity
 
     private TextView mImageDetails;
     private ImageView mMainImage;
+    private ProgressBar mProgressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        mProgressBar = (ProgressBar)findViewById(R.id.progressBar);
+        mImageDetails = (TextView) findViewById(R.id.image_details);
+
+
         setSupportActionBar(toolbar);
 
         try
@@ -114,6 +121,7 @@ public class MainActivity extends AppCompatActivity
         startCamera();
         //builder.create().show();
         mImageDetails = (TextView) findViewById(R.id.image_details);
+        mProgressBar.setVisibility(View.INVISIBLE);
         mMainImage = (ImageView) findViewById(R.id.main_image);
     }
         /*
@@ -225,6 +233,8 @@ public class MainActivity extends AppCompatActivity
 
     private void callCloudVision(final Bitmap bitmap) throws IOException {
         // Switch text to loading
+        mProgressBar.setVisibility(View.VISIBLE);
+        mImageDetails.setVisibility(View.GONE);
         mImageDetails.setText(R.string.loading_message);
 
         // Do the real work in an async task, because we need to use the network anyway
@@ -308,6 +318,8 @@ public class MainActivity extends AppCompatActivity
             }
 
             protected void onPostExecute(String result) {
+                mProgressBar.setVisibility(View.GONE);
+                mImageDetails.setVisibility(View.VISIBLE);
                 mImageDetails.setText(result);
             }
 
