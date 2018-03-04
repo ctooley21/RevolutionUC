@@ -56,7 +56,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity
+{
     private static final String CLOUD_VISION_API_KEY = "AIzaSyB7R0TWeY2oDlne-8_pOvVzMhQoS2BEoVM";
     public static final String FILE_NAME = "temp.jpg";
     private static final String ANDROID_CERT_HEADER = "X-Android-Cert";
@@ -328,20 +329,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private String convertResponseToString(BatchAnnotateImagesResponse response) {
-        String message = "I found these things:\n\n";
-
        // List<EntityAnnotation> labels = response.getResponses().get(0).getLabelAnnotations();
        List<EntityAnnotation> labels = response.getResponses().get(0).getLogoAnnotations();
+
+       StringBuilder sb = new StringBuilder();
+       sb.append("I found these things:\n\n");
+
         if (labels != null) {
             for (EntityAnnotation label : labels) {
-                message += String.format(Locale.US, "%.3f: %s", label.getScore(), label.getDescription());
-                message += "\n";
+                sb.append(String.format(Locale.US, "%.3f: %s", label.getScore(), label.getDescription()));
+                sb.append("\n");
             }
         } else {
-            message += "nothing";
+            sb.append("Nothing found");
         }
 
 
-        return message;
+        return sb.toString();
     }
 }
