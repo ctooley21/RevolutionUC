@@ -38,6 +38,7 @@ MERGED from [com.android.support:support-media-compat:25.1.1] E:\RevolutionUC\Re
 MERGED from [com.android.support:support-core-ui:25.1.1] E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.1.1\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-core-utils:25.1.1] E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.1.1\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-compat:25.1.1] E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\exploded-aar\com.android.support.constraint\constraint-layout\1.0.2\AndroidManifest.xml:9:5-20
 	android:label
 		ADDED from E:\RevolutionUC\RevolutionUC\Snapsey\app\src\main\AndroidManifest.xml:12:9-41
 	android:supportsRtl
@@ -99,6 +100,7 @@ MERGED from [com.android.support:support-media-compat:25.1.1] E:\RevolutionUC\Re
 MERGED from [com.android.support:support-core-ui:25.1.1] E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.1.1\AndroidManifest.xml:21:5-23:58
 MERGED from [com.android.support:support-core-utils:25.1.1] E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.1.1\AndroidManifest.xml:21:5-23:61
 MERGED from [com.android.support:support-compat:25.1.1] E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\exploded-aar\com.android.support.constraint\constraint-layout\1.0.2\AndroidManifest.xml:5:5-7:41
 	tools:overrideLibrary
 		ADDED from [com.android.support:design:25.1.1] E:\RevolutionUC\RevolutionUC\Snapsey\app\build\intermediates\exploded-aar\com.android.support\design\25.1.1\AndroidManifest.xml:23:9-59
 	android:targetSdkVersion

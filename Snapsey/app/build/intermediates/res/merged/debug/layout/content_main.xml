@@ -16,31 +16,44 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
             <ProgressBar
                 android:id="@+id/progressBar"
                 style="@style/Widget.AppCompat.ProgressBar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:indeterminate="true" />
-                tools:visibility="visible" />
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="252dp"
+                android:indeterminate="true"
+                app:layout_constraintBottom_toBottomOf="@+id/main_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent" />
+            tools:visibility="visible" />
 
             <TextView
                 android:id="@+id/image_details"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:text="Use the floating action button to select an image." />
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="Use the floating action button to select an image."
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/main_image"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="300dp"
-                android:scaleType="fitCenter" />
-        </LinearLayout>
+                android:layout_marginTop="72dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/image_details" />
+        </android.support.constraint.ConstraintLayout>
     </ScrollView>
 </RelativeLayout>
