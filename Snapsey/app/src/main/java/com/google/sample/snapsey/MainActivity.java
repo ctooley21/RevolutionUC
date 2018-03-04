@@ -14,10 +14,9 @@
  * limitations under the License.
  */
 
-package com.google.sample.cloudvision;
+package com.google.sample.snapsey;
 
 import android.Manifest;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -26,15 +25,11 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v4.content.FileProvider;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.View;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -58,9 +53,9 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity
+{
     private static final String CLOUD_VISION_API_KEY = "AIzaSyB7R0TWeY2oDlne-8_pOvVzMhQoS2BEoVM";
     public static final String FILE_NAME = "temp.jpg";
     private static final String ANDROID_CERT_HEADER = "X-Android-Cert";
@@ -72,20 +67,24 @@ public class MainActivity extends AppCompatActivity {
     public static final int CAMERA_PERMISSIONS_REQUEST = 2;
     public static final int CAMERA_IMAGE_REQUEST = 3;
 
-    //ProgressBar = (ProgressBar) findViewById(R.id.progressBar);
-
     private TextView mImageDetails;
     private ImageView mMainImage;
-    private ProgressBar mProgressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        mProgressBar = (ProgressBar)findViewById(R.id.progressBar);
-        mImageDetails = (TextView) findViewById(R.id.image_details);
         setSupportActionBar(toolbar);
+
+        try
+        {
+            TranslationUtil.init();
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
 
         /*
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -114,7 +113,6 @@ public class MainActivity extends AppCompatActivity {
     public void begin(){
         startCamera();
         //builder.create().show();
-        mProgressBar.setVisibility(View.INVISIBLE);
         mImageDetails = (TextView) findViewById(R.id.image_details);
         mMainImage = (ImageView) findViewById(R.id.main_image);
     }
@@ -227,9 +225,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void callCloudVision(final Bitmap bitmap) throws IOException {
         // Switch text to loading
-        //mImageDetails.setText(R.string.loading_message);
-        mProgressBar.setVisibility(View.VISIBLE);
-        mImageDetails.setVisibility(View.GONE);
+        mImageDetails.setText(R.string.loading_message);
+
         // Do the real work in an async task, because we need to use the network anyway
         new AsyncTask<Object, Void, String>() {
             @Override
@@ -311,8 +308,6 @@ public class MainActivity extends AppCompatActivity {
             }
 
             protected void onPostExecute(String result) {
-                mProgressBar.setVisibility(View.GONE);
-                mImageDetails.setVisibility(View.VISIBLE);
                 mImageDetails.setText(result);
             }
 
@@ -340,21 +335,37 @@ public class MainActivity extends AppCompatActivity {
         return Bitmap.createScaledBitmap(bitmap, resizedWidth, resizedHeight, false);
     }
 
-    private String convertResponseToString(BatchAnnotateImagesResponse response) {
-        String message = "I found these things:\n\n";
-
+    private String convertResponseToString(BatchAnnotateImagesResponse response)
+    {
        // List<EntityAnnotation> labels = response.getResponses().get(0).getLabelAnnotations();
        List<EntityAnnotation> labels = response.getResponses().get(0).getLogoAnnotations();
+
+       StringBuilder sb = new StringBuilder();
+       sb.append("I found these things:\n\n");
+
         if (labels != null) {
             for (EntityAnnotation label : labels) {
-                message += String.format(Locale.US, "%.3f: %s", label.getScore(), label.getDescription());
-                message += "\n";
+                String word = label.getDescription();
+                sb.append(word);
+                sb.append(" - ");
+                sb.append(TranslationUtil.translate(word, "english"));
+                sb.append("\n");
             }
         } else {
-            message += "nothing";
+            sb.append("Nothing found");
         }
 
 
-        return message;
+        return sb.toString();
     }
+
+    private void openAmazon(String logo) {
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_VIEW);
+        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+        intent.setData(Uri.parse("https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=" + logo));
+        startActivity(intent);
+    }
+
+
 }

@@ -5,17 +5,23 @@ android {
     buildToolsVersion "25.0.2"
 
     defaultConfig {
-        applicationId "com.google.sample.cloudvision"
+        applicationId "com.google.sample.snapsey"
         minSdkVersion 22
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+
+    packagingOptions {
+        exclude 'project.properties'
+        exclude 'META-INF/INDEX.LIST'
     }
 }
 
@@ -27,6 +33,6 @@ dependencies {
 
     compile 'com.google.api-client:google-api-client-android:1.20.0' exclude module: 'httpclient'
     compile 'com.google.http-client:google-http-client-gson:1.20.0' exclude module: 'httpclient'
-
+    compile 'com.google.cloud:google-cloud-translate:1.14.0'
     compile 'com.google.apis:google-api-services-vision:v1-rev2-1.21.0'
 }

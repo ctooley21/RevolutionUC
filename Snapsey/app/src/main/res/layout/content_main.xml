@@ -9,7 +9,7 @@
                 android:paddingRight="@dimen/activity_horizontal_margin"
                 android:paddingTop="@dimen/activity_vertical_margin"
                 app:layout_behavior="@string/appbar_scrolling_view_behavior"
-                tools:context="com.google.sample.cloudvision.MainActivity"
+                tools:context="com.google.sample.snapsey.MainActivity"
                 tools:showIn="@layout/activity_main">
 
     <ScrollView
@@ -26,8 +26,7 @@
                 style="@style/Widget.AppCompat.ProgressBar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:indeterminate="true"
-                tools:visibility="visible" />
+                android:indeterminate="true" />
 
             <TextView
                 android:id="@+id/image_details"
