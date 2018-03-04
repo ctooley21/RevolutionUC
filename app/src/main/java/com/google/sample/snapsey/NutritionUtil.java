@@ -31,25 +31,31 @@ public class NutritionUtil
         glutenItems = Arrays.asList("wheat", "barley", "rye", "oat");
     }
 
-    public static void postData(String item) {
-        Log.d("GI", calculateGILevels(item)+"");
-        Log.d("GI", calculateGlucose(item)+"");
-    }
+    public static List<Integer> postData(String item) {
+        List<Integer> numbers = new ArrayList<>();
 
-    public static int calculateGILevels(String name)
-    {
         HttpClient httpclient = new DefaultHttpClient();
         HttpPost httppost = new HttpPost("https://api.nutritionix.com/v1_1/search");
+
+        double fiber;
+        double grams;
+        double carbs;
+        String nutt;
+        double glucoseIndex;
+        int gluten;
+        int calories;
 
         try {
             List<NameValuePair> nameValuePairs = new ArrayList<>();
             nameValuePairs.add(new BasicNameValuePair("appId", appId));
             nameValuePairs.add(new BasicNameValuePair("appKey", appKey));
-            nameValuePairs.add(new BasicNameValuePair("query", name));
+            nameValuePairs.add(new BasicNameValuePair("query", item));
             nameValuePairs.add(new BasicNameValuePair("limit", Integer.toString(1)));
             nameValuePairs.add(new BasicNameValuePair("fields[]", "nf_dietary_fiber"));
             nameValuePairs.add(new BasicNameValuePair("fields[]", "nf_serving_weight_grams"));
+            nameValuePairs.add(new BasicNameValuePair("fields[]", "nf_ingredient_statement"));
             nameValuePairs.add(new BasicNameValuePair("fields[]", "nf_total_carbohydrate"));
+            nameValuePairs.add(new BasicNameValuePair("fields[]", "nf_calories"));
             httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
 
             org.apache.http.HttpResponse response = httpclient.execute(httppost);
@@ -62,66 +68,37 @@ public class NutritionUtil
             JSONTokener tokener = new JSONTokener(builder.toString());
             JSONObject finalResult = new JSONObject(tokener);
 
-            double fiber = finalResult.getJSONArray("hits").getJSONObject(0).getJSONObject("fields").getInt("nf_dietary_fiber");
-            double grams = finalResult.getJSONArray("hits").getJSONObject(0).getJSONObject("fields").getInt("nf_serving_weight_grams");
-            double carbs = finalResult.getJSONArray("hits").getJSONObject(0).getJSONObject("fields").getInt("nf_total_carbohydrate");
-            double level = ((carbs - fiber) / grams) * 100.0;
+            fiber = finalResult.getJSONArray("hits").getJSONObject(0).getJSONObject("fields").getInt("nf_dietary_fiber");
+            grams = finalResult.getJSONArray("hits").getJSONObject(0).getJSONObject("fields").getInt("nf_serving_weight_grams");
+            carbs = finalResult.getJSONArray("hits").getJSONObject(0).getJSONObject("fields").getInt("nf_total_carbohydrate");
+            nutt = finalResult.getJSONArray("hits").getJSONObject(0).getJSONObject("fields").getString("nf_ingredient_statement");
+            calories = finalResult.getJSONArray("hits").getJSONObject(0).getJSONObject("fields").getInt("nf_calories");
+            glucoseIndex = ((carbs - fiber) / grams) * 100.0;
+            gluten = 0;
 
-            if(level > 100) level = 100;
-            if(level < 0) level = 0;
-
-            return (int) level;
-
-        } catch (Exception e)
-        {
-            return 0;
-        }
-    }
-
-    public static int calculateGlucose(String name)
-    {
-        HttpClient httpclient = new DefaultHttpClient();
-        HttpPost httppost = new HttpPost("https://api.nutritionix.com/v1_1/search");
-
-        try {
-            List<NameValuePair> nameValuePairs = new ArrayList<>();
-            nameValuePairs.add(new BasicNameValuePair("appId", appId));
-            nameValuePairs.add(new BasicNameValuePair("appKey", appKey));
-            nameValuePairs.add(new BasicNameValuePair("query", name));
-            nameValuePairs.add(new BasicNameValuePair("limit", Integer.toString(1)));
-            nameValuePairs.add(new BasicNameValuePair("fields[]", "nf_dietary_fiber"));
-            nameValuePairs.add(new BasicNameValuePair("fields[]", "nf_total_carbohydrate"));
-            httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
-
-            org.apache.http.HttpResponse response = httpclient.execute(httppost);
-
-            BufferedReader reader = new BufferedReader(new InputStreamReader(response.getEntity().getContent(), "UTF-8"));
-            StringBuilder builder = new StringBuilder();
-            for (String line; (line = reader.readLine()) != null;)
-            {
-                builder.append(line).append("\n");
-            }
-            JSONTokener tokener = new JSONTokener(builder.toString());
-            JSONObject finalResult = new JSONObject(tokener);
-
-            String nutt = finalResult.getJSONArray("hits").getJSONObject(0).getJSONObject("fields").getString("nf_ingredient_statement");
-
-            int level = 0;
+            if(glucoseIndex > 100) glucoseIndex = 100;
+            if(glucoseIndex < 0) glucoseIndex = 0;
 
             for(String s : glutenItems)
             {
                 if(nutt.toLowerCase().contains(s))
                 {
-                    level += 25;
+                    gluten += 25;
                 }
             }
 
-            return level;
-
         } catch (Exception e)
         {
-            return 0;
+            e.printStackTrace();
+            calories = 0;
+            glucoseIndex = 0;
+            gluten = 0;
         }
-    }
 
+        numbers.add(calories);
+        numbers.add(gluten);
+        numbers.add((int)glucoseIndex);
+
+        return numbers;
+    }
 }
