@@ -347,4 +347,14 @@ public class MainActivity extends AppCompatActivity
 
         return sb.toString();
     }
+
+    private void openAmazon(String logo) {
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_VIEW);
+        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+        intent.setData(Uri.parse("https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=" + logo));
+        startActivity(intent);
+    }
+
+
 }
