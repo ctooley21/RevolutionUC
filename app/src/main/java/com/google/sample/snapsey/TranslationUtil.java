@@ -32,16 +32,31 @@ public class TranslationUtil
         languages.put("russian", "ru");
     }
 
-    private static void translate(String word, String toLanguage) throws IOException
+    public static String translate(String word, String toLanguage)
     {
-        Translate.Translations.List list = t.new Translations().list(
-                Arrays.asList(word), getAbbreviation(toLanguage));
-        list.setKey(getApiKey());
-        TranslationsListResponse response = list.execute();
+        StringBuilder translated = new StringBuilder();
+        Translate.Translations.List list;
+        TranslationsListResponse response;
+        try
+        {
+            list = t.new Translations().list(
+                    Arrays.asList(word), getAbbreviation(toLanguage));
+            list.setKey(getApiKey());
+            response = list.execute();
+        }
+        catch (IOException e)
+        {
+            return "Unable to translate.";
+        }
 
         for (TranslationsResource translationsResource : response.getTranslations()) {
-            System.out.println(translationsResource.getTranslatedText());
+            translated.append(translationsResource.getTranslatedText());
+            translated.append(" ");
         }
+
+        translated.setLength(translated.length() - 1);
+
+        return translated.toString();
     }
 
     private static String getAbbreviation(String language)

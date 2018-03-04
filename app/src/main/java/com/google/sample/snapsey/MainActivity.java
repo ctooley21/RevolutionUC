@@ -47,7 +47,6 @@ import com.google.api.services.vision.v1.model.BatchAnnotateImagesResponse;
 import com.google.api.services.vision.v1.model.EntityAnnotation;
 import com.google.api.services.vision.v1.model.Feature;
 import com.google.api.services.vision.v1.model.Image;
-import com.google.sample.cloudvision.R;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -328,7 +327,8 @@ public class MainActivity extends AppCompatActivity
         return Bitmap.createScaledBitmap(bitmap, resizedWidth, resizedHeight, false);
     }
 
-    private String convertResponseToString(BatchAnnotateImagesResponse response) {
+    private String convertResponseToString(BatchAnnotateImagesResponse response)
+    {
        // List<EntityAnnotation> labels = response.getResponses().get(0).getLabelAnnotations();
        List<EntityAnnotation> labels = response.getResponses().get(0).getLogoAnnotations();
 
@@ -337,7 +337,10 @@ public class MainActivity extends AppCompatActivity
 
         if (labels != null) {
             for (EntityAnnotation label : labels) {
-                sb.append(String.format(Locale.US, "%.3f: %s", label.getScore(), label.getDescription()));
+                String word = String.format(Locale.US, "%.3f: %s", label.getScore(), label.getDescription());
+                sb.append(word);
+                sb.append(" - ");
+                sb.append(TranslationUtil.translate(word, "english"));
                 sb.append("\n");
             }
         } else {
